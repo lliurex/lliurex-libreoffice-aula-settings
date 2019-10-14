@@ -1,0 +1,5 @@
+lliurex-libreoffice-aula-settings (0.1) bionic; urgency=medium
+
+  * Initial release. Disabling SAL_ENABLE_FILE_LOCKING
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 14 Oct 2019 12:40:38 +0200
