@@ -1,0 +1,17 @@
+lliurex-libreoffice-aula-settings (0.1-1) focal; urgency=medium
+
+  * First version to Focal.
+
+ -- Daniel Duran <daduve@gmail.com>  Mon, 31 May 2021 16:29:08 +0200
+
+lliurex-libreoffice-aula-settings (0.1-1) bionic; urgency=medium
+
+  * Added diversions
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 14 Oct 2019 12:49:24 +0200
+
+lliurex-libreoffice-aula-settings (0.1) bionic; urgency=medium
+
+  * Initial release. Disabling SAL_ENABLE_FILE_LOCKING
+
+ -- Hector Garcia Huerta <hectorgh@gmail.com>  Mon, 14 Oct 2019 12:40:38 +0200

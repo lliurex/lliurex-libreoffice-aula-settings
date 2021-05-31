@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+
+if [ "$1" = "remove" ] ; then
+	
+
+        PKG="lliurex-libreoffice-aula-settings"
+
+
+        ORIGINAL_LO_FILE="/usr/lib/libreoffice/program/soffice"
+        NEW_DIVERTED_LO_FILE="/usr/lib/libreoffice/program/soffice.diverted"
+        LLIUREX_FILE="/usr/lib/libreoffice/program/soffice.lliurex"
+
+        if [ -L "$ORIGINAL_LO_FILE" ]; then
+                rm -rf "$ORIGINAL_LO_FILE" || true
+                dpkg-divert --remove --package ${PKG} --rename --divert "$NEW_DIVERTED_LO_FILE" "$ORIGINAL_LO_FILE"
+
+        fi
+
+fi
+#DEBHELPER#
+
+exit 0

@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+   configure)
+
+	PKG="lliurex-libreoffice-aula-settings"   
+	ORIGINAL_LO_FILE="/usr/lib/libreoffice/program/soffice"
+        NEW_DIVERTED_LO_FILE="/usr/lib/libreoffice/program/soffice.diverted"
+        LLIUREX_FILE="/usr/lib/libreoffice/program/soffice.lliurex"
+
+	if [ ! -L "$ORIGINAL_LO_FILE" ]; then
+
+                dpkg-divert --add --package ${PKG} --rename --divert "$NEW_DIVERTED_LO_FILE" "$ORIGINAL_LO_FILE"
+                ln -s "$LLIUREX_FILE" "$ORIGINAL_LO_FILE"
+
+        fi
+	
+   ;;
+
+   abort-upgrade|abort-remove|abort-deconfigure)
+   ;;
+
+   *)
+       exit 1
+   ;;
+esac
+
+#DEBHELPER#

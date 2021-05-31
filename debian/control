@@ -1,0 +1,13 @@
+Source: lliurex-libreoffice-aula-settings
+Section: admin
+Priority: optional
+Maintainer: Equipo LliureX <lliurex@gva.es>
+Build-Depends: debhelper (>= 9.0)
+Standards-Version: 4.1.2
+
+Package: lliurex-libreoffice-aula-settings
+Architecture: all
+Depends: ${misc:Depends}
+Description: Lliurex classroom libreoffice settings
+ Libreoffice custom settings for lliurex classroom  
+
